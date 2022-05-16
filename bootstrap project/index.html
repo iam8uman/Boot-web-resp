@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/78e6212ab3.js" crossorigin="anonymous"></script>
+
+    <title>PortFolio-DreamOfMany</title>
+
+    <style>
+        .pride {
+            background: linear-gradient(to right, purple, cyan);
+            font-family: cursive;
+            text-align: center;
+            padding: 5px;
+            margin: auto;
+        }
+
+        .row {
+            /* box-shadow: 2px 5px 7px rgb(161, 161, 161),-2px -5px 7px rgb(255, 224, 219); */
+            border-radius: 25px;
+        }
+
+        .borderrr input,
+        .borderrr textarea {
+            border: 2px solid black;
+            border-radius: 7px;
+        }
+
+        .links ul {
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .fa-brands {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 23px;
+            border: 2px solid forestgreen;
+            padding: 10px;
+            border-radius: 50%;
+            transition: 1s;
+        }
+
+        .fa-brands:hover {
+            color: rgb(255, 255, 255);
+            background: mediumseagreen;
+        }
+
+        .container .fa-solid {
+            font-size: 35px;
+            color: black;
+            padding: 10px;
+        }
+
+        .boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        /* .skillsss p .progress{
+            margin: 10px;
+            font-size: 23px;
+            font-family: cursive;
+        } */
+        .skillss {
+            margin: 10px;
+            font-size: 20px;
+            font-family: cursive;
+            color: black;
+            /* padding: 7px; */
+            border-radius: 3px;
+
+        }
+
+        .skillsss .progress-bar {
+            height: 20px;
+        }
+
+        @media screen and (max-width: 480px) {
+            #skills {
+                display: none;
+            }
+
+            .links {
+                /* text-align: center; */
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+            }
+
+            .boxes {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav - bars start  -->
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-success" style="
+        background: linear-gradient(
+          to right,
+          rgb(21, 254, 254),
+          #D64161FF);
+      ">
+        <a class="navbar-brand" href="./index.html">Port<i class="fa-solid fa-circle-nodes"></i>Folio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projects</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Skills
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#skills">Web developement</a>
+                        <a class="dropdown-item" href="#">Application developement</a>
+                        <a class="dropdown-item" href="#">Blockchain on Etherium</a>
+                        <a class="dropdown-item" href="#">Graphic Desiging</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">B-for Business</a>
+                        <a class="dropdown-item" href="#">Youtubing</a>
+                        <a class="dropdown-item" href="#">Video Editiong</a>
+                        <a class="dropdown-item" href="#">And a good learner</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Me8848You</a>
+                </li>
+            </ul>
+            <!-- switches start -->
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                <label class="custom-control-label" for="customSwitch1"></label>
+            </div>
+            <!-- switches end  -->
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 apple" type="search" value="SumanTheProgrammer" readonly
+                    aria-label="Search" />
+                <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+            </form>
+        </div>
+    </nav>
+    <!-- nav bars end  -->
+
+    <!-- carousel start -->
+    <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade " data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../images/6.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Welcome To PortFolio</h2>
+                        <p>Hii, I am Suman Sharma , BE IT student from NCIT</p>
+                        <a href="./about.html" class="btn btn-outline-success btn-lg active" role="button"
+                            aria-pressed="true">Technology</a>
+                        <a href="contact.html" class="btn btn-outline-danger btn-lg active" role="button"
+                            aria-pressed="true">Business</a>
+                        <a href="./about.html" class="btn btn-outline-primary btn-lg active" role="button"
+                            aria-pressed="true">As a
+                            person</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/8.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Web Tech</h2>
+                        <p>All about website development . <br> You can visit respectiove links.</p>
+                        <a href="./contact.html" class="btn btn-outline-danger btn-lg active" role="button"
+                            aria-pressed="true">Frontend</a>
+                        <a href="./contact.html" class="btn btn-outline-success btn-lg active" role="button"
+                            aria-pressed="true">Backend</a>
+                        <a href="./Hello-universe.html" class="btn btn-outline-info btn-lg active" role="button"
+                            aria-pressed="true">Full-stack </a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/9.jpg" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>SumanTheProgrammer</h2>
+                        <p>
+                            A Good Learner <br>
+                            Definitely not a LOOSER nor a WARRIER . <br>But I am very good at self defense :)
+                        </p>
+                        <a href="./contact.html" class="btn btn-outline-danger btn-lg active" role="button"
+                            aria-pressed="true">More
+                            info</a>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!-- carousel end  -->
+
+    <!-- carousel paxi ko tyo 2 ota  -->
+    <div class="container">
+
+        <div class="row mb-2 my-4">
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Technology</strong>
+                        <h3 class="mb-0">The Kathmadu Post</h3>
+                        <div class="mb-1 text-muted">Nov 12-Suman Sharma</div>
+                        <p class="card-text mb-auto">The M1 Macs: Should you buy one?
+                            <br>
+                            The new M1 Macs are definitely deserving of all the hype, they are some seriously impressive
+                            chips. But as these are first-generation chips, perhaps waiting would be wise.
+                        </p>
+                        <a href="https://kathmandupost.com/science-technology/2021/03/02/the-m1-macs-should-you-buy-one"
+                            class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img my-5 img-fluid" width="250px" height="500px"
+                            src="../images/thumb1.jpeg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em"></text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Dream</strong>
+                        <h3 class="mb-0">Heritage Techpana</h3>
+                        <div class="mb-1 text-muted">Nov 27 - Suman Sharma</div>
+                        <p class="mb-auto">‘We dream to be Nepal’s first billion-dollar IT company’
+                            <br>
+                            How a group of like-minded people came together to start the cyber security firm Nassec, and
+                            how they’re now developing their most important project till date: ReconwithMe, a
+                            vulnerability assessment tool.
+                        </p>
+                        <a href="https://kathmandupost.com/science-technology/2021/04/06/we-dream-to-be-nepal-s-first-billion-dollar-it-company"
+                            class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img  img-fluid  my-5" width="250" height="290"
+                            src="../images/thumb2.jpeg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em"></text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- circle wala start vayo yeha bata  -->
+    <h2 class="pride">About Me </h2>
+    <h2 style="text-align: center; color: aqua; "><a class="navbar-brand" href="#">Port<i
+                class="fa-solid fa-circle-nodes"></i>Folio</a></h2>
+    <div class="container marketing about-us">
+
+        <!-- Three columns of text below the carousel -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Bio-<span class="text-muted">graphy</span></h2>
+                <p class="lead">IT's me <span style="font-size: 27px; color:crimson;">Suman Sharma</span> -The
+                    <span style="font-size: 27px; color: crimson;">Programmer</span>
+                    <br>
+                    I am 21 years BE IT Student from Nepal college of information technology .
+                    <br>
+                    Permanent Address: Bareng-01, Baglung Nepal.
+                    <br>
+                    Current Address : Kathmandu Nepal.
+                    <br>
+                    Father's Name: Prem Prasad Sharma
+                    <br>
+                    Mother's Name: Mina Devi Sharma
+                    <br>
+                    Nationality: Nepali
+                    <br>
+                    <br>
+                    My awesome childhood was spent in the lap of Himalaya of Baglung located at the Western Part Of
+                    Nepal,<br> where I studied my basic level in Shree Sarbodaya Higher secondary School . And <br>
+                    I have just completed my +2 level form Kalika Manavgyan Ma. Vi. Kalikanagar Butwal.
+                    <br>Currently I have been studing Bachelor in information Technology In NCIT located in Balkumari
+                    Lalitpur.
+                    <br>
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500px"
+                    height="500px " src="../images/f1.jpg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                    role="img" aria-label="Placeholder: 500x500">
+                <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text>
+                </svg>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Pro-<span class="text-muted">fessionals :):</span></h2> <br><br>
+                <p class="lead"> <span class="app"
+                        style="color: rgb(0, 0, 0); -webkit-text-stroke: 1px rgb(73, 14, 73); font-size: 31px;">Who am I
+                        now ?*</span>
+                    <br>
+                    <strong>
+                        1. Currently I am working as a Senior Full Stack Developer in F1 Soft. <br>
+                        2. Project Manager in JYS Pvt. Ltd. <br>
+                        3. Graphic Designer in Alpha Academy. <br>
+                        4. Academically regular 4th sem BE IT student . <br>
+                        5. Apart form the 11-5 study i have been participating in extra curricular activities , sports ,
+                        tour , trekking and mountaineering. <br>
+                        6. And so on..... <br><br>
+
+                        <span style="color: rgb(1, 40, 43);">For more info. Visit the following links --->></span>
+                    </strong>
+                    </span>
+                </p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" src="../images/f2.jpg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                    role="img" aria-label="Placeholder: 500x500">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text>
+                </svg>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+    </div>
+    <!-- /END THE FEATURETTES -->
+
+    <!-- contact section start -->
+    <div class="container container-fluid">
+        <h2 class="pride transparent">Contact</h2>
+        <form class="row g-3 needs-validation borderrr" novalidate>
+            <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" value="Suman" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" value="Sharma" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">Email</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="email" class="form-control" id="validationCustomUsername"
+                        aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                        Please enter a valid Email
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationCustom03" class="form-label">City</label>
+                <input type="text" class="form-control" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationCustom05" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="validationCustom05" required>
+                <div class="invalid-feedback">
+                    Please provide a valid zip.
+                </div>
+            </div>
+            <div class="col-md-12">
+                <form class="form-floating">
+                    <label for="validationCustom05" class="form-label">Your Message Here </label>
+                    <textarea name="text" id="validationCustom03" class="form-control" cols="30" rows="10"></textarea>
+                    <!-- <label for="floatingInputValue">Input with value</label> -->
+                </form>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-success d-grid gap-2 col-md-12 mx-auto" type="submit">Submit form</button>
+            </div>
+        </form>
+        <!-- <h3>You can directly contact me through social media links</h3> -->
+
+        <hr class="border-success border-3 opacity-75">
+        <!-- <h3>You can directly contact me through social media links</h3> -->
+        <div class="links container container-fluid">
+            <ul type="none">
+                <li><a href="https://www.facebook.com/profile.php?id=100019112559068"><i
+                            class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/sumannn_707/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com/Me8848You"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://web.telegram.org/?legacy=1#/im"><i class="fa-brands fa-telegram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCAfZNoGsOMOOxMyJHBPsveg"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="https://github.com/Me8848You"><i class="fa-brands fa-github"></i></a></li>
+            </ul>
+        </div>
+        <hr class="border-primary border-3 opacity-75">
+        <div class="boxes container container-fluid">
+            <div class="mini-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Temporary address: <br> Balkumari-13 , Lalitpur Nepal <br>Permanent address: <br>Bareng-01 , Baglung
+                    Nepal </p>
+            </div>
+            <div class="mini-box">
+                <i class="fa-solid fa-phone"></i>
+                <p>Phone No: 9866134804 <br>Email Address: Me8848You@<br>Fax No: 3232445 <br> Post Box :
+                    234-123-221 </p>
+            </div>
+            <div class="mini-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Permanent address: <br>Bareng-01 , Baglung
+                    Nepal <br> Temporary address: <br> Balkumari-13 , Lalitpur Nepal </p>
+            </div>
+        </div>
+
+        <!-- contact section end  -->
+        <hr class="border-primary border-3 opacity-75">
+    </div>
+    </div>
+
+    <!-- skills section start  -->
+    <div class="container  container-fluid  skillsss" id="skills">
+
+        <h2 class="pride">Skills And Abilities </h2>
+        <p>
+        <div class="progress skillss">
+            <div class="progress-bar progress-bar-animated bg-danger progress-bar-striped" role="progressbar"
+                style="width: 93%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Html 95%</div>
+        </div>
+        </p>
+        <p>
+        <div class="progress skillss">
+            <div class="progress-bar progress-bar-animated bg-danger progress-bar-striped" role="progressbar"
+                style="width: 80%;" aria-valuenow="25" aria-valuemin="10" aria-valuemax="100">CSS 80%</div>
+        </div>
+        </p>
+        <p>
+        <div class="progress skillss">
+            <div class="progress-bar progress-bar-animated bg-danger progress-bar-striped" role="progressbar"
+                style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">JavaScript 70%</div>
+        </div>
+        </p>
+        <p>
+        <div class="progress skillss">
+            <div class="progress-bar progress-bar-animated bg-danger progress-bar-striped" role="progressbar"
+                style="width: 60%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">PHP 60%</div>
+        </div>
+        </p>
+        <p>
+        <div class="progress skillss">
+            <div class="progress-bar  progress-bar-animated bg-danger progress-bar-striped" role="progressbar"
+                style="width: 60% ; " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Mysql 60%</div>
+        </div>
+        </p>
+        <div class="progress skillss">
+            <div class="progress-bar progress-bar-animated bg-danger progress-bar-striped " role="progressbar"
+                style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Bootstrap 70%</div>
+        </div>
+        </p>
+
+        <hr class="border-primary border-3 opacity-75">
+    </div>
+
+    <!-- quotes of the month add gardim hai  -->
+    <div class="container">
+
+
+        <h2 class="pride">Quotes of the month :):</h2>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>1. "Tell me and I forget. Teach me and I remember. Involve me and I learn."</p>
+                <footer class="blockquote-footer"> Benjamin Franklin</footer>
+            </blockquote>
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>2. “Live as if you were to die tomorrow. Learn as if you were to live forever.”</p>
+                <footer class="blockquote-footer">Mahatma Gandhi</footer>
+            </blockquote>
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>3. “Be who you are and say what you feel, because those who mind don’t matter and those who matter
+                    don’t mind.” </p>
+                <footer class="blockquote-footer">Bernard M. Baruch</footer>
+            </blockquote>
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>4. “We must not allow other people’s limited perceptions to define us.”</p>
+                <footer class="blockquote-footer">Virginia Satir</footer>
+            </blockquote>
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>5. “The difference between ordinary and extraordinary is that little extra.”</p>
+                <footer class="blockquote-footer">Jimmy Johnson</footer>
+            </blockquote>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+</body>
+
+</html>
