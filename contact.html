@@ -142,7 +142,8 @@
                             aria-pressed="true">Technology</a>
                         <a href="./contact.html" class="btn btn-outline-danger btn-lg active" role="button"
                             aria-pressed="true">Business</a>
-                        <a href="./about.html" class="btn btn-outline-primary btn-lg active" role="button" aria-pressed="true">As a
+                        <a href="./about.html" class="btn btn-outline-primary btn-lg active" role="button"
+                            aria-pressed="true">As a
                             person</a>
                     </div>
                 </div>
@@ -228,11 +229,11 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <form class="form-floating">
-                    <label for="validationCustom05" class="form-label">Your Message Here </label>
-                    <textarea name="text" id="validationCustom03" class="form-control" cols="30" rows="10"></textarea>
-                    <!-- <label for="floatingInputValue">Input with value</label> -->
-                </form>
+                <div class="form-floating">
+                    <label for="floatingTextarea2">Your message here.....</label>
+                    <textarea class="form-control" placeholder="Your PortFolio website is just Awesome yaar. " id="floatingTextarea2"
+                        style="height: 250px"></textarea>
+                </div>
             </div>
             <div class="col-12">
                 <div class="form-check">
@@ -253,12 +254,14 @@
         <!-- <h3>You can directly contact me through social media links</h3> -->
         <div class="links">
             <ul type="none">
-                <li><a href="https://www.facebook.com/profile.php?id=100019112559068"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100019112559068"><i
+                            class="fa-brands fa-facebook"></i></a></li>
                 <li><a href="https://www.instagram.com/sumannn_707/"><i class="fa-brands fa-instagram"></i></a></li>
                 <li><a href="https://twitter.com/Me8848You"><i class="fa-brands fa-twitter"></i></a></li>
                 <li><a href="https://web.telegram.org/?legacy=1#/im"><i class="fa-brands fa-telegram"></i></a></li>
-                <li><a href="https://www.youtube.com/channel/UCAfZNoGsOMOOxMyJHBPsveg"><i class="fa-brands fa-youtube"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCAfZNoGsOMOOxMyJHBPsveg"><i
+                            class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="https://github.com/Me8848You"><i class="fa-brands fa-github"></i></a></li>
             </ul>
         </div>
         <hr class="border-primary border-3 opacity-75">
@@ -308,25 +311,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <!-- Contact section form validation using css pseudo classes :valid and :invalid  -->
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (() => {
+        (function () {
             'use strict'
 
             // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            const forms = document.querySelectorAll('.needs-validation')
+            var forms = document.querySelectorAll('.needs-validation')
 
             // Loop over them and prevent submission
-            Array.from(forms).forEach(form => {
-                form.addEventListener('submit', event => {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
 
-                    form.classList.add('was-validated')
-                }, false)
-            })
+                        form.classList.add('was-validated')
+                    }, false)
+                })
         })()
     </script>
 </body>
