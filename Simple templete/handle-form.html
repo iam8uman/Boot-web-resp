@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form handling js</title>
+    <style>
+        form h3{
+            color: aqua;
+            font-family: cursive;
+            font-size: 23px;
+            text-align: center;
+
+        }
+        form{
+            background: linear-gradient(to right,purple,rgb(255, 79, 48));
+            display: block;
+            justify-content: center;
+            text-align: center;
+            margin: 45px 120px;
+            padding: 50px 20px ;
+            border-radius: 25px;
+            border: 3px solid magenta;
+
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        p input{
+            font-size: 21px;
+            color: black;
+            font-family: monospace;
+            padding: 10px 20px;
+            border: 2px solid purple;
+            border-radius: 12px;
+            margin: 13px;
+
+        }
+        p input[type="submit"]{
+            background-color: green;
+            color: white;
+
+        }
+        p input[type="submit"]:hover{
+            background-color: aqua;
+            color: black;
+            border: 2px solid green;
+        }
+        ::placeholder{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <form   method="post">
+        <h3>Please fill up form </h3>
+        <p>
+            <input type="text" name="text" id="name" placeholder="Your Name ">
+        </p>
+        <p>
+            <input type="email" name="text" id="email" placeholder="Your Email ">
+        </p>
+        <p>
+            <input type="password" name="text" id="password" placeholder="Your Password  ">
+        </p>
+        <p>
+            <input type="submit" value="Submit Now" onclick="ValidateForm();">
+        </p>
+    </form>
+    <script>
+        function ValidateForm(){
+            // get the value of the input part name email and password here 
+            var name=document.getElementById("name").value;
+            var email=document.getElementById("email").value;
+            var password=document.getElementById("password").value;
+
+            // now first check these all value are empty or not 
+            if(!empty(name)&&!empty(email)&&!empty(password))
+            {
+                // here all these three values are not empty so check all these value are simillar to the format or not 
+                if(name.length>10)
+                {
+                    document.getElementById("name").innerHTML="Name Format does not match ";
+                }
+            }
+            else
+            {
+                document.getElementById("name").innerHTML="All these value can not be totally Empty ";
+            }
+        }
+    </script>
+</body>
+</html>
